@@ -5,11 +5,8 @@ class ComputerPlayer
     end
 
     def get_position(legal_positions)
-        puts "enter a position with coordinates separated with a space like `4 7`"
-        position = gets.chomp.split(" ").map {|pos| pos.to_i}
-        if position.length != 2
-            raise "sorry, you entered wrong values"
-        end
-        position
+        comp_pick = legal_positions.sample
+        puts "Computer position is #{comp_pick.to_s}"
+        comp_pick
     end
 end
